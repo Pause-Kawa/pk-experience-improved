@@ -2,8 +2,9 @@
 # Scores
 # ----------------------------------------
 # Used for memorial excerpt
+# memorizedPDim enable to store the dimension : 1: overworld - 2: the_nether - 3: the_end
 scoreboard objectives add dropGBPattern minecraft.dropped:minecraft.globe_banner_pattern
-scoreboard objectives add memorizedTPPoint dummy
+scoreboard objectives add memorizedPDim dummy
 scoreboard objectives add memorizedPointX dummy
 scoreboard objectives add memorizedPointY dummy
 scoreboard objectives add memorizedPointZ dummy

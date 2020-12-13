@@ -1,4 +1,7 @@
-execute at @s run scoreboard players set @p[tag=PK_memorial_excerpt_throwner] memorizedTPPoint 1
+# Store the player memorized point dimension
+execute at @s run scoreboard players set @p[tag=PK_memorial_excerpt_throwner,predicate=pk_core:dimension/in_overworld] memorizedPDim 1
+execute at @s run scoreboard players set @p[tag=PK_memorial_excerpt_throwner,predicate=pk_core:dimension/in_the_nether] memorizedPDim 2
+execute at @s run scoreboard players set @p[tag=PK_memorial_excerpt_throwner,predicate=pk_core:dimension/in_the_end] memorizedPDim 3
 # Store memorial excerpt location in throwner scores
 execute store result score @p[tag=PK_memorial_excerpt_throwner] memorizedPointX run data get entity @s Pos[0]
 execute store result score @p[tag=PK_memorial_excerpt_throwner] memorizedPointY run data get entity @s Pos[1]

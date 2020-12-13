@@ -17,3 +17,12 @@ scoreboard players reset @a[scores={dropGBPattern=1..}] dropGBPattern
 # Teleportation Potion
 # - Trigger when a player consume a teleportation potion
 execute as @a[nbt={ActiveEffects:[{Id:28b,Amplifier:3b}]}] at @s run function pk_esnl:mechanics/alchemy_mastering/teleportation_potion/consume
+
+# ----------------------------------------
+# Rain Dissipater
+# ----------------------------------------
+
+# Check motion and init the rain dissipater
+execute as @e[type=arrow,nbt={CustomPotionEffects:[{Id:29b,Amplifier:4b}]},tag=!PK_init] run function pk_esnl:mechanics/rain_dissipater/check_motion
+# Trigger the rain dissipater
+execute as @e[type=arrow,tag=PK_triggered_rain_dissipater] at @s run function pk_esnl:mechanics/rain_dissipater/check_timer

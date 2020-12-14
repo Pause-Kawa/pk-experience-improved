@@ -1,0 +1,1 @@
+give @s written_book{display:{Name:'{"text":"Alchemist Registry","color":"yellow","italic":false}'},pkAlchemistRegistry:1b,title:"Alchemist Registry",author:"Unknowned author",generation:3,pages:['{"text":"The book shows ancient glyphs that seems to need some knowledge to understand...","italic":true}']} 1

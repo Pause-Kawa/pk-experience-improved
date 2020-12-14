@@ -1,0 +1,1 @@
+give @s leather_boots{display:{Name:'{"text":"Spring Boots","color":"yellow","italic":false}',color:10897315},pkSpringBoots:1b} 1

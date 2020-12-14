@@ -5,7 +5,7 @@
             "conditions": {
                 "item": {
                     "item": "minecraft:written_book",
-                    "nbt": "{alchemistRegistry: 1b}"
+                    "nbt": "{pkAlchemistRegistry: 1b}"
                 },
                 "location": {
                     "block": {

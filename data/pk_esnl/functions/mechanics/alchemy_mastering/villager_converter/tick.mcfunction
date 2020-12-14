@@ -1,5 +1,5 @@
 # Remove marker if the current block on it is not a lectern having the alchemist registry anymore
-execute unless block ~ ~ ~ minecraft:lectern{Book:{id:"minecraft:written_book",tag:{alchemistRegistry:1b}}} run kill @s
+execute unless block ~ ~ ~ minecraft:lectern{Book:{id:"minecraft:written_book",tag:{pkAlchemistRegistry:1b}}} run kill @s
 
 # If a librarian having no XP approches, check if it is the lectern owner
 execute at @s as @e[type=villager,nbt={Xp:0,VillagerData:{profession:"minecraft:librarian"}},distance=..3] run function pk_esnl:mechanics/alchemy_mastering/villager_converter/lectern_marker_check_librarian

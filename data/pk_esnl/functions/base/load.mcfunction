@@ -8,6 +8,10 @@ scoreboard objectives add memorizedPDim dummy
 scoreboard objectives add memorizedPointX dummy
 scoreboard objectives add memorizedPointY dummy
 scoreboard objectives add memorizedPointZ dummy
+# Used for spring boots
+scoreboard objectives add jumpBoostDelay dummy
+scoreboard objectives add jumpBoostInRow dummy
+# scoreboard objectives add jumpBInRowDelay dummy
 
 # ----------------------------------------
 # Logs

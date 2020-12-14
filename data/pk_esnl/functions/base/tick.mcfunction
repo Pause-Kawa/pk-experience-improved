@@ -26,3 +26,10 @@ execute as @a[nbt={ActiveEffects:[{Id:28b,Amplifier:3b}]}] at @s run function pk
 execute as @e[type=arrow,nbt={CustomPotionEffects:[{Id:29b,Amplifier:4b}]},tag=!PK_init] run function pk_esnl:mechanics/rain_dissipater/check_motion
 # Trigger the rain dissipater
 execute as @e[type=arrow,tag=PK_triggered_rain_dissipater] at @s run function pk_esnl:mechanics/rain_dissipater/check_timer
+
+# ----------------------------------------
+# Spring boots
+# ----------------------------------------
+
+# Trigger when a player wears spring boots unless it is in liquid or it has the levitation or slow falling effect
+execute as @a[predicate=pk_esnl:spring_boots/wearing,predicate=!pk_core:flags/in_liquid] unless entity @s[nbt={ActiveEffects:[{Id:25b}]}] unless entity @s[nbt={ActiveEffects:[{Id:28b}]}] at @s run function pk_esnl:mechanics/spring_boots/tick

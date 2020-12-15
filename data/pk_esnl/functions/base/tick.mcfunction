@@ -6,7 +6,7 @@
 # - Trigger when a player place an Alchemist Registry in a lectern
 execute as @a[advancements={pk_esnl:triggers/place_alchemist_registry = true}] run function pk_esnl:mechanics/alchemy_mastering/villager_converter/player_placed_alchemist_registry
 # - Tick on alchemy mastering lectern marker 
-execute as @e[type=area_effect_cloud,tag=pkAlchemyMasteringLectern] at @s run function pk_esnl:mechanics/alchemy_mastering/villager_converter/tick
+execute as @e[type=area_effect_cloud,tag=PK_alchemy_mastering_lectern] at @s run function pk_esnl:mechanics/alchemy_mastering/villager_converter/tick
 
 # Memorial Excerpt
 # - Trigger when a memorial excerpt entity exists
@@ -32,4 +32,4 @@ execute as @e[type=arrow,tag=PK_triggered_rain_dissipater] at @s run function pk
 # ----------------------------------------
 
 # Trigger when a player wears spring boots unless it is in liquid or it has the levitation or slow falling effect
-execute as @a[predicate=pk_esnl:spring_boots/wearing,predicate=!pk_core:flags/in_liquid] unless entity @s[nbt={ActiveEffects:[{Id:25b}]}] unless entity @s[nbt={ActiveEffects:[{Id:28b}]}] at @s run function pk_esnl:mechanics/spring_boots/tick
+execute as @a[predicate=pk_esnl:spring_boots/wearing,predicate=!pk_core:location/block/in_liquid] unless entity @s[nbt={ActiveEffects:[{Id:25b}]}] unless entity @s[nbt={ActiveEffects:[{Id:28b}]}] at @s run function pk_esnl:mechanics/spring_boots/tick

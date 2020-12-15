@@ -1,4 +1,4 @@
-# Assign sneaking predicate as tag for performances
+# Assign is_sneaking predicate as tag for performances
 execute if entity @s[tag=!PK_is_sneaking,predicate=pk_core:flags/is_sneaking] run tag @s add PK_is_sneaking
 execute if entity @s[tag=PK_is_sneaking,predicate=!pk_core:flags/is_sneaking] run tag @s remove PK_is_sneaking
 

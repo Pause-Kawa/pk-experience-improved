@@ -11,4 +11,4 @@
 execute if score #PK_raycast_to_lectern value matches 1 if block ~ ~ ~ minecraft:lectern run scoreboard players set #PK_raycast_to_lectern value 2
 
 # Marker
-summon area_effect_cloud ~ ~ ~ {Duration:0,Tags:["pkRaycastHitBlock"]}
+summon area_effect_cloud ~ ~ ~ {Duration:0,Tags:["PK_raycast_hit_block"]}

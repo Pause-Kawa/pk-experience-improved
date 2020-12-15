@@ -17,6 +17,8 @@ scoreboard players set %PK_const_100 value 100
 scoreboard objectives add posX dummy
 scoreboard objectives add posY dummy
 scoreboard objectives add posZ dummy
+# Motion : 
+scoreboard objectives add motionY dummy
 # Positions - specific to villagers : 
 scoreboard objectives add posJobsiteX dummy
 scoreboard objectives add posJobsiteY dummy

@@ -11,7 +11,6 @@ scoreboard objectives add memorizedPointZ dummy
 # Used for spring boots
 scoreboard objectives add jumpBoostDelay dummy
 scoreboard objectives add jumpBoostInRow dummy
-# scoreboard objectives add jumpBInRowDelay dummy
 
 # ----------------------------------------
 # Logs

@@ -13,6 +13,8 @@
 scoreboard objectives add value dummy
 # Constants :
 scoreboard players set %PK_const_100 value 100
+# UUID check 
+scoreboard objectives add UUID0 dummy
 # Positions :
 scoreboard objectives add posX dummy
 scoreboard objectives add posY dummy

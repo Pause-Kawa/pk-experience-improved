@@ -1,6 +1,6 @@
-# Directly mark the throwner if the item has been dropped from inventory
-execute if entity @s[nbt={Age:0s}] as @p[scores={dropGBPattern=1}] run tag @p add PK_memorial_excerpt_throwner
+# Check if the memorial excerpt has a thrower or is dropped by a container
+execute if entity @s[nbt={Age:0s}] run function pk_esnl:mechanics/alchemy_mastering/memorial_excerpt/store_thrower
 # Animation
-execute if entity @s[nbt={Age:65s}] if entity @a[tag=PK_memorial_excerpt_throwner] run function pk_esnl:mechanics/alchemy_mastering/memorial_excerpt/start_animation
+execute if entity @s[tag=PK_item_has_thrower,nbt={Age:65s}] run function pk_esnl:mechanics/alchemy_mastering/memorial_excerpt/start_animation
 # Save teleportation point
-execute if entity @s[nbt={Age:100s}] if entity @a[tag=PK_memorial_excerpt_throwner] run function pk_esnl:mechanics/alchemy_mastering/memorial_excerpt/throwner_memorized_point_store
+execute if entity @s[tag=PK_item_has_thrower,nbt={Age:100s}] run function pk_esnl:mechanics/alchemy_mastering/memorial_excerpt/check_thrower_before_memorized_point_store

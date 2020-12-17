@@ -11,8 +11,6 @@ execute as @e[type=area_effect_cloud,tag=PK_alchemy_mastering_lectern] at @s run
 # Memorial Excerpt
 # - Trigger when a memorial excerpt entity exists
 execute as @e[type=item,nbt={Item:{tag:{memorialExcerpt:1b}}}] at @s run function pk_esnl:mechanics/alchemy_mastering/memorial_excerpt/tick
-# - Reset scoreboard used to know if a player dropped a globe banner pattern
-scoreboard players reset @a[scores={dropGBPattern=1..}] dropGBPattern
 
 # Teleportation Potion
 # - Trigger when a player consume a teleportation potion

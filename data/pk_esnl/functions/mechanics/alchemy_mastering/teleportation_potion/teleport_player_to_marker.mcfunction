@@ -9,5 +9,10 @@ execute as @a[tag=PK_consumed_tp_potion,scores={memorizedPDim=1},predicate=!pk_c
 execute as @a[tag=PK_consumed_tp_potion,scores={memorizedPDim=2},predicate=!pk_core:location/dimension/in_the_nether] at @s in minecraft:the_nether positioned as @s run tp @s ~ ~ ~
 execute as @a[tag=PK_consumed_tp_potion,scores={memorizedPDim=3},predicate=!pk_core:location/dimension/in_the_end] at @s in minecraft:the_end positioned as @s run tp @s ~ ~ ~
 
+# Clear tag and add a tag for waiting animation
+# This prevents issues if two players are consuming the teleportation potion in the exact same tick
+tag @s remove PK_consumed_tp_potion
+tag @s add PK_waiting_for_tp_potion_animation
+
 # Apply animation after teleporation (need to wait for 1 tick)
 schedule function pk_esnl:mechanics/alchemy_mastering/teleportation_potion/schedule_gateway_teleport_successfuly 1t

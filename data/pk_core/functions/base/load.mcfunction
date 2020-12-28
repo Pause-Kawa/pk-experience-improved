@@ -13,7 +13,9 @@
 scoreboard objectives add value dummy
 # Constants :
 scoreboard players set %PK_const_100 value 100
-# UUID check 
+# Current Level :
+scoreboard objectives add currentLevel dummy
+# UUID check :
 scoreboard objectives add UUID0 dummy
 # Positions :
 scoreboard objectives add posX dummy
@@ -31,6 +33,7 @@ scoreboard objectives add posJobsiteZ dummy
 # ----------------------------------------
 team add HiddenName
 team modify HiddenName nametagVisibility never
+team join HiddenName @e[type=villager,team=!HiddenName]
 
 # ----------------------------------------
 # Randomizer

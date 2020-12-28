@@ -3,3 +3,5 @@ data modify storage temp Items[1].tag.Enchantments[{id:"minecraft:efficiency"}] 
 
 # Increment the applied enchantments score
 scoreboard players add %PK_ancient_altar_applied_enchants value 1
+
+execute at @s run tp @s ~ ~ ~

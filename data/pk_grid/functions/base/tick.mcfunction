@@ -1,0 +1,2 @@
+execute as @a[scores={diamond_mined=1..},predicate=!namespace:player_has_silk_touch] run scoreboard players add @s diamond_counter 1
+execute as @a[scores={diamond_mined=1..}] run scoreboard players reset diamond_mined

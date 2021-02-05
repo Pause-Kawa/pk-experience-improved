@@ -27,6 +27,8 @@ scoreboard objectives add motionY dummy
 scoreboard objectives add posJobsiteX dummy
 scoreboard objectives add posJobsiteY dummy
 scoreboard objectives add posJobsiteZ dummy
+# Delay 
+scoreboard objectives add delay dummy
 
 # ----------------------------------------
 # Teams

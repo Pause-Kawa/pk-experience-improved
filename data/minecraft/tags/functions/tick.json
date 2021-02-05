@@ -1,6 +1,5 @@
 {
     "values": [
-        "pk_grid:base/tick",
         "pk_strc:base/tick",
         "pk_esnl:base/tick"
     ]

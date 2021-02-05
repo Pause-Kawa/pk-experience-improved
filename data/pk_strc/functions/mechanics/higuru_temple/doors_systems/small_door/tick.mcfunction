@@ -1,0 +1,2 @@
+execute if entity @s[tag=keeper] align xyz positioned ~-10 ~ ~-10 unless entity @e[type=#pk_strc:mobs,tag=door_keeper,dx=20,dy=7,dz=20] at @s run function pk_strc:mechanics/higuru_temple/doors_systems/small_door/open
+execute if entity @s[tag=lever] if block ~ ~1 ~ lever[powered=true] run function pk_strc:mechanics/higuru_temple/doors_systems/small_door/open

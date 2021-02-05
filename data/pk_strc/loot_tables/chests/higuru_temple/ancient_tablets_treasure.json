@@ -1,0 +1,133 @@
+{
+    "pools": [
+        {
+            "rolls": 2,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:bone",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_count",
+                            "count": {
+                                "min": 2,
+                                "max": 4
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:gold_nugget",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_count",
+                            "count": {
+                                "min": 3,
+                                "max": 6
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:emerald",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_count",
+                            "count": {
+                                "min": 1,
+                                "max": 3
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "rolls": {
+                "min": 1,
+                "max": 2
+            },
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "weight": 20,
+                    "name": "minecraft:name_tag",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_nbt",
+                            "tag": "{pkAncientTablet:1b,Enchantments:[{id:\"minecraft:efficiency\",lvl:6s}],display:{Name:'{\"text\":\"Sturdy Ancient Tablet\",\"color\":\"yellow\",\"italic\":false}'}}"
+                        }
+                    ]
+                },
+                {
+                    "type": "minecraft:item",
+                    "weight": 20,
+                    "name": "minecraft:name_tag",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_nbt",
+                            "tag": "{pkAncientTablet:1b,Enchantments:[{id:\"minecraft:sharpness\",lvl:6s}],display:{Name:'{\"text\":\"Sharp Ancient Tablet\",\"color\":\"yellow\",\"italic\":false}'}}"
+                        }
+                    ]
+                },
+                {
+                    "type": "minecraft:item",
+                    "weight": 20,
+                    "name": "minecraft:name_tag",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_nbt",
+                            "tag": "{pkAncientTablet:1b,Enchantments:[{id:\"minecraft:protection\",lvl:6s}],display:{Name:'{\"text\":\"Protective Ancient Tablet\",\"color\":\"yellow\",\"italic\":false}'}}"
+                        }
+                    ]
+                },
+                {
+                    "type": "minecraft:item",
+                    "weight": 15,
+                    "name": "minecraft:name_tag",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_nbt",
+                            "tag": "{pkAncientTablet:1b,Enchantments:[{id:\"minecraft:looting\",lvl:4s}],display:{Name:'{\"text\":\"Stripper Ancient Tablet\",\"color\":\"yellow\",\"italic\":false}'}}"
+                        }
+                    ]
+                },
+                {
+                    "type": "minecraft:item",
+                    "weight": 15,
+                    "name": "minecraft:name_tag",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_nbt",
+                            "tag": "{pkAncientTablet:1b,Enchantments:[{id:\"minecraft:power\",lvl:6s}],display:{Name:'{\"text\":\"Brutal Ancient Tablet\",\"color\":\"yellow\",\"italic\":false}'}}"
+                        }
+                    ]
+                },
+                {
+                    "type": "minecraft:item",
+                    "weight": 10,
+                    "name": "minecraft:name_tag",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_nbt",
+                            "tag": "{pkAncientTablet:1b,Enchantments:[{id:\"minecraft:sweeping\",lvl:4s}],display:{Name:'{\"text\":\"Dextrous Ancient Tablet\",\"color\":\"yellow\",\"italic\":false}'}}"
+                        }
+                    ]
+                },
+                {
+                    "type": "minecraft:item",
+                    "weight": 10,
+                    "name": "minecraft:name_tag",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_nbt",
+                            "tag": "{pkAncientTablet:1b,Enchantments:[{id:\"minecraft:knockback\",lvl:4s}],display:{Name:'{\"text\":\"Blowing Ancient Tablet\",\"color\":\"yellow\",\"italic\":false}'}}"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -5,4 +5,4 @@ execute store result entity @s Pos[2] double 1 run scoreboard players get @p[tag
 # Teleport the player
 function pk_esnl:mechanics/alchemy_mastering/teleportation_potion/teleport_player_to_marker
 # Remove the marker
-kill @s
+kill @s 

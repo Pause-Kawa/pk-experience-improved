@@ -1,7 +1,6 @@
 {
     "values": [
         "pk_core:base/load",
-        "pk_grid:base/load",
         "pk_strc:base/load",
         "pk_esnl:base/load"
     ]

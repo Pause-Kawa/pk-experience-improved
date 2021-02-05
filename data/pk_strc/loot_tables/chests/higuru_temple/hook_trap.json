@@ -8,12 +8,12 @@
                     "name": "minecraft:splash_potion",
                     "functions": [
                         {
-                            "function": "minecraft:set_nbt",
-                            "tag": "{Potion:\"minecraft:slowness\"}"
-                        },
-                        {
                             "function": "minecraft:set_count",
                             "count": 2
+                        },
+                        {
+                            "function": "minecraft:set_nbt",
+                            "tag": "{Potion:\"minecraft:slowness\"}"
                         }
                     ]
                 },
@@ -28,16 +28,6 @@
                         {
                             "function": "minecraft:set_nbt",
                             "tag": "{Potion:\"minecraft:poison\"}"
-                        }
-                    ]
-                },
-                {
-                    "type": "minecraft:item",
-                    "name": "minecraft:fire_charge",
-                    "functions": [
-                        {
-                            "function": "minecraft:set_count",
-                            "count": 4
                         }
                     ]
                 }

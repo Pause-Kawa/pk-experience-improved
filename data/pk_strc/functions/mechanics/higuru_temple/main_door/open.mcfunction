@@ -1,3 +1,0 @@
-say Hello
-kill @s
-

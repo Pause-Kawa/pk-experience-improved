@@ -4,3 +4,5 @@ give @s bow{Enchantments:[{id:"minecraft:power",lvl:100s},{id:"minecraft:infinit
 give @s arrow 1
 give @s potion{CustomPotionEffects:[{Id:10b,Amplifier:10b,Duration:1200}]} 4
 give @s cooked_beef 64
+give @s honey_bottle 16
+give @s ender_pearl 16

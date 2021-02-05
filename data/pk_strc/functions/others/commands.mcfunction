@@ -18,6 +18,13 @@ execute align xyz positioned ~0.5 ~ ~0.5 run summon minecraft:area_effect_cloud 
 # Summon main_door marker
 execute align xyz positioned ~0.5 ~ ~0.5 run summon minecraft:area_effect_cloud ~ ~ ~ {Tags:["PK_strc_marker","PK_HT_main_door","PK_HT_mechanic"],Age:-2147483648,Duration:-1,WaitTime:-2147483648}
 
+# Summon treasure_room_door marker
+execute align xyz positioned ~0.5 ~ ~0.5 run summon minecraft:area_effect_cloud ~ ~ ~ {Tags:["PK_strc_marker","PK_HT_treasure_room_door","PK_HT_mechanic"],Age:-2147483648,Duration:-1,WaitTime:-2147483648}
+
+# Summon pit_trap_wire marker
+# - For pit trap, replace "PK_HT_pit_trap_wire" by "PK_HT_pit_trap"
+execute align xyz positioned ~0.5 ~ ~0.5 run summon minecraft:area_effect_cloud ~ ~ ~ {Tags:["PK_strc_marker","PK_HT_pit_trap_wire","PK_HT_mechanic"],Age:-2147483648,Duration:-1,WaitTime:-2147483648}
+
 # Summon door keeper archer
 summon skeleton ~ ~ ~ {PersistenceRequired:1b,Silent:1b,Team:"HiddenName",DeathLootTable:"pk_strc:entities/higuru",Health:60f,Tags:["PK_strc_mob","door_keeper","higuru","archer"],CustomName:'{"text":"Higuru Archer","italic":false}',HandItems:[{id:"minecraft:bow",Count:1b,tag:{Enchantments:[{id:"minecraft:power",lvl:3s},{id:"minecraft:punch",lvl:1s}]}},{}],ArmorItems:[{id:"minecraft:leather_boots",Count:1b,tag:{display:{color:8694103}}},{id:"minecraft:leather_leggings",Count:1b,tag:{display:{color:8694103}}},{id:"minecraft:leather_chestplate",Count:1b,tag:{display:{color:8694103}}},{id:"minecraft:player_head",Count:1b,tag:{SkullOwner:{Id:[I;234715373,-507361151,-1308149372,1963184167],Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMmM3NzgzMmJjMDViYzE3MTY4NDM1NTM2ODk5MzNmODU0OWYxZDI5NjMzOWRkZTYzNDc1MWNiZjg5NzVhZmE0YSJ9fX0="}]}}}}],ArmorDropChances:[0.000F,0.000F,0.000F,0.000F],Attributes:[{Name:"generic.max_health",Base:60}]}
 

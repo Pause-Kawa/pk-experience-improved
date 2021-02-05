@@ -16,7 +16,9 @@ execute unless score %PK_param_dev_mode value matches 1 if entity @s[tag=PK_HT_b
 
 # Traps systems
 # - Pit traps
-execute unless score %PK_param_dev_mode value matches 1 if entity @s[tag=PK_HT_pit_trap] if block ~ ~ ~ tripwire[powered=true] run function pk_strc:mechanics/higuru_temple/traps_systems/pit_trap/open
+execute unless score %PK_param_dev_mode value matches 1 if entity @s[tag=PK_HT_pit_trap_wire] if block ~ ~-1 ~ tripwire[powered=true] run function pk_strc:mechanics/higuru_temple/traps_systems/pit_trap/search_pit_trap
+# - Silverfish trap
+execute unless score %PK_param_dev_mode value matches 1 as @s[tag=PK_HT_silverfish_trap] if entity @a[distance=..4] run function pk_strc:mechanics/higuru_temple/traps_systems/silverfish_trap/init
 
 # Ancient Altar
 execute if entity @s[tag=PK_ancient_altar] if entity @p[distance=..10] run function pk_strc:mechanics/higuru_temple/ancient_altar/tick

@@ -13,6 +13,12 @@ execute as @e[type=item,nbt={Item:{tag:{deathEvent:1b}}}] at @s run function pk_
 execute as @a[advancements={pk_strc:triggers/press_stone_button = true}] run advancement revoke @s only pk_strc:triggers/press_stone_button
 
 # ----------------------------------------
+# Swamp Mansory
+# ----------------------------------------
+# Generate a Swamp Mansory over a Swamp Hut
+execute as @e[type=witch,tag=!PK_strc_mob,predicate=pk_strc:location/swamp_hut] unless entity @e[type=area_effect_cloud,tag=PK_strc_swamp_mansory,distance=..20] at @s run function pk_strc:generate/swamp_mansory/generate
+
+# ----------------------------------------
 # Player Effect
 # ----------------------------------------
 # Luck IV (adventure mode)

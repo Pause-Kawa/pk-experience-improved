@@ -1,7 +1,9 @@
 # ----------------------------------------
 # Scores
 # ----------------------------------------
-# Used to know if the Wither has already been beaten 
+# Used for custom mobs sounds
+# - Timer before next ambient sound is playable
+scoreboard objectives add AmSoundDelay dummy
 
 # ----------------------------------------
 # Logs

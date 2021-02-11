@@ -1,2 +1,0 @@
-tag @s remove handle_bow
-data modify entity @s HandItems set value [{id:"minecraft:iron_sword",Count:1b,tag:{Enchantments:[{id:"minecraft:sharpness",lvl:4s}]}},{id:"minecraft:shield",Count:1b,tag:{AttributeModifiers:[{AttributeName:"generic.armor",Name:"generic.armor",Amount:1,Operation:0,UUIDLeast:66257,UUIDMost:159612}]}}]

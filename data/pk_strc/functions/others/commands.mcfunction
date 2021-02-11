@@ -9,7 +9,7 @@
 execute align xyz positioned ~0.5 ~-1 ~0.5 run summon minecraft:area_effect_cloud ~ ~ ~ {Tags:["PK_strc_marker","PK_ancient_altar","PK_HT_mechanic"],Age:-2147483648,Duration:-1,WaitTime:-2147483648}
 
 # Summon a Higuru spawner AEC
-execute align xyz positioned ~0.5 ~ ~0.5 run summon minecraft:area_effect_cloud ~ ~ ~ {Tags:["PK_strc_marker","PK_spawner","higuru","PK_HT_mechanic"],Age:-2147483648,Duration:-1,WaitTime:-2147483648}
+execute align xyz positioned ~0.5 ~ ~0.5 run summon minecraft:area_effect_cloud ~ ~ ~ {Tags:["PK_strc_marker","PK_spawner","higuru_skeleton","PK_HT_mechanic"],Age:-2147483648,Duration:-1,WaitTime:-2147483648}
 
 # Summon small_door marker (lever)
 # - For door mechanic that is keeped by higuru keeper, replace the tag "lever" with "keeper"
@@ -26,7 +26,18 @@ execute align xyz positioned ~0.5 ~ ~0.5 run summon minecraft:area_effect_cloud 
 execute align xyz positioned ~0.5 ~ ~0.5 run summon minecraft:area_effect_cloud ~ ~ ~ {Tags:["PK_strc_marker","PK_HT_pit_trap_wire","PK_HT_mechanic"],Age:-2147483648,Duration:-1,WaitTime:-2147483648}
 
 # Summon door keeper archer
-summon skeleton ~ ~ ~ {PersistenceRequired:1b,Silent:1b,Team:"HiddenName",DeathLootTable:"pk_strc:entities/higuru",Health:60f,Tags:["PK_strc_mob","door_keeper","higuru","archer"],CustomName:'{"text":"Higuru Archer","italic":false}',HandItems:[{id:"minecraft:bow",Count:1b,tag:{Enchantments:[{id:"minecraft:power",lvl:3s},{id:"minecraft:punch",lvl:1s}]}},{}],ArmorItems:[{id:"minecraft:leather_boots",Count:1b,tag:{display:{color:8694103}}},{id:"minecraft:leather_leggings",Count:1b,tag:{display:{color:8694103}}},{id:"minecraft:leather_chestplate",Count:1b,tag:{display:{color:8694103}}},{id:"minecraft:player_head",Count:1b,tag:{SkullOwner:{Id:[I;234715373,-507361151,-1308149372,1963184167],Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMmM3NzgzMmJjMDViYzE3MTY4NDM1NTM2ODk5MzNmODU0OWYxZDI5NjMzOWRkZTYzNDc1MWNiZjg5NzVhZmE0YSJ9fX0="}]}}}}],ArmorDropChances:[0.000F,0.000F,0.000F,0.000F],Attributes:[{Name:"generic.max_health",Base:60}]}
+summon skeleton ~ ~ ~ {PersistenceRequired:1b,Silent:1b,Team:"HiddenName",Tags:["PK_strc_mob","door_keeper","higuru_skeleton","archer"],DeathLootTable:"pk_strc:entities/higuru_skeleton",Health:40f,CustomName:'{"text":"Higuru Skeleton","italic":false}',HandItems:[{id:"minecraft:bow",Count:1b,tag:{Enchantments:[{id:"minecraft:power",lvl:3s},{id:"minecraft:punch",lvl:1s}]}},{id:"minecraft:shield",Count:1b,tag:{BlockEntityTag:{Base:12,Patterns:[{Color:9,Pattern:"ss"},{Color:14,Pattern:"cbo"},{Color:4,Pattern:"bts"},{Color:4,Pattern:"tts"},{Color:4,Pattern:"flo"}]},display:{Name:'{"text":"Higuru Shield","italic":false}'}}}],HandDropChances:[0.050F,0.050F],ArmorItems:[{},{},{},{id:"minecraft:dead_horn_coral_fan",Count:1b}],ArmorDropChances:[0.085F,0.085F,0.085F,0.000F],Attributes:[{Name:"generic.max_health",Base:40},{Name:"generic.attack_damage",Base:7}]}
 
 # Summon door keeper swordsman
-summon skeleton ~ ~ ~ {PersistenceRequired:1b,Silent:1b,Team:"HiddenName",DeathLootTable:"pk_strc:entities/higuru",Health:60f,Tags:["PK_strc_mob","door_keeper","higuru","swordsman"],CustomName:'{"text":"Higuru Swordsman","italic":false}',HandItems:[{id:"minecraft:stone_sword",Count:1b},{}],ArmorItems:[{id:"minecraft:leather_boots",Count:1b,tag:{display:{color:8694103}}},{id:"minecraft:leather_leggings",Count:1b,tag:{display:{color:8694103}}},{id:"minecraft:leather_chestplate",Count:1b,tag:{display:{color:8694103}}},{id:"minecraft:player_head",Count:1b,tag:{SkullOwner:{Id:[I;234715373,-507361151,-1308149372,1963184167],Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMmM3NzgzMmJjMDViYzE3MTY4NDM1NTM2ODk5MzNmODU0OWYxZDI5NjMzOWRkZTYzNDc1MWNiZjg5NzVhZmE0YSJ9fX0="}]}}}}],ArmorDropChances:[0.000F,0.000F,0.000F,0.000F],Attributes:[{Name:"generic.max_health",Base:60},{Name:"generic.attack_damage",Base:10}]}
+execute as @e[tag=swordsman,tag=door_keeper] at @s run summon skeleton ~ ~ ~ {PersistenceRequired:1b,Silent:1b,Team:"HiddenName",Tags:["PK_strc_mob","door_keeper","higuru_skeleton","axeman"],DeathLootTable:"pk_strc:entities/higuru_skeleton",Health:40f,CustomName:'{"text":"Higuru Skeleton","italic":false}',HandItems:[{id:"minecraft:stone_axe",Count:1b},{id:"minecraft:shield",Count:1b,tag:{BlockEntityTag:{Base:12,Patterns:[{Color:9,Pattern:"ss"},{Color:14,Pattern:"cbo"},{Color:4,Pattern:"bts"},{Color:4,Pattern:"tts"},{Color:4,Pattern:"flo"}]},display:{Name:'{"text":"Higuru Shield","italic":false}'}}}],HandDropChances:[0.085F,0.050F],ArmorItems:[{},{},{},{id:"minecraft:dead_fire_coral_fan",Count:1b}],ArmorDropChances:[0.085F,0.085F,0.085F,0.000F],Attributes:[{Name:"generic.max_health",Base:40},{Name:"generic.attack_damage",Base:7}]}
+
+
+# ----------------------------------------
+# Swamp Mansory
+# ----------------------------------------
+
+# Summon the Swamp Mansory structure marker
+execute align xyz positioned ~0.5 ~ ~0.5 run summon minecraft:area_effect_cloud ~ ~ ~ {Tags:["PK_strc_marker","PK_strc_swamp_mansory"],Age:-2147483648,Duration:-1,WaitTime:-2147483648}
+
+# Summon Swamp Mansory mob placer
+execute align xyz positioned ~0.5 ~ ~0.5 run summon minecraft:area_effect_cloud ~ ~ ~ {Tags:["PK_strc_marker","PK_SM_mob_placer","witch"],Age:-2147483648,Duration:-1,WaitTime:-2147483648}

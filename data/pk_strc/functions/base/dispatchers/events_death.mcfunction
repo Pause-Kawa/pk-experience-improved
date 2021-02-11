@@ -1,5 +1,8 @@
-# Event that occurs when a specified entity dies
-execute if entity @s[nbt={Item:{tag:{higuru:1b}}}] run function pk_strc:entities/higuru/event_death
+# Dispatch Event that occurs when a specified entity dies
+# This will prevent every marker to be crawled if not necessary
 
-# Remove the death event marker
+# Higuru Skeleton
+execute if entity @s[nbt={Item:{tag:{higuruSkeleton:1b}}}] run function pk_strc:entities/higuru_skeleton/event_death
+
+# Common
 kill @s

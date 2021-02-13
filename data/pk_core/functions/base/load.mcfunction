@@ -25,6 +25,8 @@ scoreboard objectives add motionY dummy
 scoreboard objectives add posJobsiteX dummy
 scoreboard objectives add posJobsiteY dummy
 scoreboard objectives add posJobsiteZ dummy
+# Health
+scoreboard objectives add health dummy
 # Delay 
 scoreboard objectives add delay dummy
 

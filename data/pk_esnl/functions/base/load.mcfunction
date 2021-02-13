@@ -13,6 +13,7 @@ scoreboard objectives add jumpBoostInRow dummy
 # Used for bewitchments
 scoreboard objectives add impetuousLevel dummy
 scoreboard objectives add impetuousTimer dummy
+scoreboard objectives add sgInstinctDelay dummy
 # Player events
 scoreboard objectives add onKill totalKillCount
 scoreboard objectives add onDeath deathCount

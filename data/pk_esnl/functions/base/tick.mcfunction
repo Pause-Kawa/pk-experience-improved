@@ -16,6 +16,7 @@ execute as @e[type=item,nbt={Item:{tag:{memorialExcerpt:1b}}}] at @s run functio
 # - Trigger when a player consume a teleportation potion
 execute as @a[nbt={ActiveEffects:[{Id:28b,Amplifier:3b}]}] at @s run function pk_esnl:mechanics/alchemy_mastering/teleportation_potion/consume
 
+
 # ----------------------------------------
 # Rain Dissipater
 # ----------------------------------------
@@ -25,6 +26,7 @@ execute as @e[type=arrow,nbt={CustomPotionEffects:[{Id:29b,Amplifier:4b}]},tag=!
 # Trigger the rain dissipater
 execute as @e[type=arrow,tag=PK_triggered_rain_dissipater] at @s run function pk_esnl:mechanics/rain_dissipater/check_timer
 
+
 # ----------------------------------------
 # Spring boots
 # ----------------------------------------
@@ -32,9 +34,23 @@ execute as @e[type=arrow,tag=PK_triggered_rain_dissipater] at @s run function pk
 # Trigger when a player wears spring boots unless it is in liquid or it has the levitation or slow falling effect
 execute as @a[predicate=pk_esnl:spring_boots/wearing,predicate=!pk_core:location/block/in_liquid] unless entity @s[nbt={ActiveEffects:[{Id:25b}]}] unless entity @s[nbt={ActiveEffects:[{Id:28b}]}] at @s run function pk_esnl:mechanics/spring_boots/tick
 
+
+# ----------------------------------------
+# Bewitchments
+# ----------------------------------------
+
+# Impetuousity
+function pk_esnl:mechanics/bewitchment/impetuousity/tick
+# Robustness
+function pk_esnl:mechanics/bewitchment/robustness/tick
+
 # ----------------------------------------
 # Events
 # ----------------------------------------
 
-# On player death : recover the Faithfullness items in the player inventory
+# On player kill
+execute as @a[scores={onKill=1}] at @s run function pk_esnl:events/player_on_kill/trigger
+# On player death
 execute as @a[scores={onDeath=1}] at @s run function pk_esnl:events/player_on_death/trigger
+# On shoot with bow 
+execute as @a[scores={onShootWithBow=1}] at @s run function pk_esnl:events/player_on_death/trigger

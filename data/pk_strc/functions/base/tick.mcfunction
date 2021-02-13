@@ -10,7 +10,7 @@ execute as @e[type=item,nbt={Item:{tag:{deathEvent:1b}}}] at @s run function pk_
 # Higuru Temple
 # ----------------------------------------
 # Remove advancement when a player trig a button
-execute as @a[advancements={pk_strc:triggers/press_stone_button = true}] run advancement revoke @s only pk_strc:triggers/press_stone_button
+execute as @a[advancements={pk_strc:triggers/press_stone_button=true}] run advancement revoke @s only pk_strc:triggers/press_stone_button
 
 # ----------------------------------------
 # Swamp Mansory

@@ -10,8 +10,13 @@ scoreboard objectives add memorizedPointZ dummy
 # Used for spring boots
 scoreboard objectives add jumpBoostDelay dummy
 scoreboard objectives add jumpBoostInRow dummy
-# Player death event
+# Used for bewitchments
+scoreboard objectives add impetuousLevel dummy
+scoreboard objectives add impetuousTimer dummy
+# Player events
+scoreboard objectives add onKill totalKillCount
 scoreboard objectives add onDeath deathCount
+scoreboard objectives add onShootWithBow minecraft.used:bow
 
 # ----------------------------------------
 # Gamerule

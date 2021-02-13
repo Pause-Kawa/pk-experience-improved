@@ -8,6 +8,9 @@ execute if score %PK_temp value matches 1.. run function pk_strc:mechanics/higur
 # - Savagery 
 execute store result score %PK_temp value run data get storage temp Items[0].tag.pkAncientTabletSavagery
 execute if score %PK_temp value matches 1.. run function pk_strc:mechanics/higuru_temple/ancient_altar/check_appliable_item/savagery
+# - Impetuousity 
+execute store result score %PK_temp value run data get storage temp Items[0].tag.pkAncientTabletImpetuousity
+execute if score %PK_temp value matches 1.. run function pk_strc:mechanics/higuru_temple/ancient_altar/check_appliable_item/impetuousity
 
 
 # If at least one enchantment has been successfully applied: replace the container Items by the storage temp Items

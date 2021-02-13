@@ -1,0 +1,84 @@
+{
+    "type": "minecraft:block",
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:alternatives",
+                    "children": [
+                        {
+                            "type": "minecraft:item",
+                            "name": "minecraft:cobblestone",
+                            "conditions": [
+                                {
+                                    "condition": "minecraft:match_tool",
+                                    "predicate": {
+                                        "nbt": "{pkSavagery:1b}"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "type": "minecraft:item",
+                            "name": "minecraft:iron_ore"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:iron_nugget",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_count",
+                            "count": 8
+                        },
+                        {
+                            "function": "minecraft:explosion_decay"
+                        }
+                    ],
+                    "conditions": [
+                        {
+                            "condition": "minecraft:match_tool",
+                            "predicate": {
+                                "nbt": "{pkSavagery:1b}"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:iron_nugget",
+                    "functions": [
+                        {
+                            "function": "minecraft:apply_bonus",
+                            "enchantment": "minecraft:fortune",
+                            "formula": "minecraft:ore_drops"
+                        },
+                        {
+                            "function": "minecraft:explosion_decay"
+                        }
+                    ],
+                    "conditions": [
+                        {
+                            "condition": "minecraft:match_tool",
+                            "predicate": {
+                                "nbt": "{pkSavagery:1b}"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

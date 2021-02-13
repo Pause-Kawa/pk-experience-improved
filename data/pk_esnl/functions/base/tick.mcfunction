@@ -33,10 +33,8 @@ execute as @e[type=arrow,tag=PK_triggered_rain_dissipater] at @s run function pk
 execute as @a[predicate=pk_esnl:spring_boots/wearing,predicate=!pk_core:location/block/in_liquid] unless entity @s[nbt={ActiveEffects:[{Id:25b}]}] unless entity @s[nbt={ActiveEffects:[{Id:28b}]}] at @s run function pk_esnl:mechanics/spring_boots/tick
 
 # ----------------------------------------
-# Bewitchments
+# Events
 # ----------------------------------------
 
-# Faithfullness
+# On player death : recover the Faithfullness items in the player inventory
 execute as @a[scores={onDeath=1}] at @s run function pk_esnl:events/player_on_death/trigger
-# - Reset player onDeath event
-scoreboard players reset @a[scores={onDeath=1}] onDeath

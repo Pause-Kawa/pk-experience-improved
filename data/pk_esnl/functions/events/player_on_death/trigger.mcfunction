@@ -1,3 +1,6 @@
+# Reset player onDeath score
+scoreboard players reset @s onDeath
+
 # Save and drop player inventory and experience points
 # - Save current player inventory to drop
 function pk_esnl:events/player_on_death/save_player_inventory

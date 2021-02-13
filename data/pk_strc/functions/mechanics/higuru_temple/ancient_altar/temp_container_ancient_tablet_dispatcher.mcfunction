@@ -11,6 +11,8 @@ execute if data storage temp Items[0].tag.pkAncientTabletImpetuousity run functi
 execute if data storage temp Items[0].tag.pkAncientTabletRobustness run function pk_strc:mechanics/higuru_temple/ancient_altar/check_appliable_item/robustness
 # - Safeguard Instinct
 execute if data storage temp Items[0].tag.pkAncientTabletSafeguardInstinct run function pk_strc:mechanics/higuru_temple/ancient_altar/check_appliable_item/safeguard_instinct
+# - Wild Cushioning
+execute if data storage temp Items[0].tag.pkAncientTabletWildCushioning run function pk_strc:mechanics/higuru_temple/ancient_altar/check_appliable_item/wild_cushioning
 
 # If at least one enchantment has been successfully applied: replace the container Items by the storage temp Items
 execute if score %PK_ancient_altar_applied_enchants value matches 1.. run function pk_strc:mechanics/higuru_temple/ancient_altar/ancient_altar_replace_items

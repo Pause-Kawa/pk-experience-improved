@@ -43,7 +43,8 @@ execute as @a[predicate=pk_esnl:spring_boots/wearing,predicate=!pk_core:location
 function pk_esnl:mechanics/bewitchment/impetuousity/tick
 # Safeguard Instinct
 function pk_esnl:mechanics/bewitchment/safeguard_instinct/tick
-
+# Wild Cushioning
+function pk_esnl:mechanics/bewitchment/wild_cushioning/tick
 
 # ----------------------------------------
 # Events

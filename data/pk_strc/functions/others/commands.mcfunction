@@ -18,6 +18,9 @@ execute align xyz positioned ~0.501 ~-1.001 ~0.501 run summon falling_block ~ ~ 
 # Exemple of Ancient Tablet
 give @p name_tag{display:{Name:'{"text":"Faithful Ancient Tablet","italic":false}',Lore:['{"text":"Faithfulness","color":"yellow","italic":false}']},pkAncientTablet:1b,pkAncientTabletFaithfulness:1b,Enchantments:[{}]} 1
 
+give @p name_tag{display:{Name:'{"text":"Wild Ancient Tablet","italic":false}',Lore:['{"text":"Wild Cushioning","color":"yellow","italic":false}']},pkAncientTablet:1b,pkAncientTabletWildCushioning:1b,Enchantments:[{}]} 1
+
+
 # Summon a Higuru spawner AEC
 execute align xyz positioned ~0.5 ~ ~0.5 run summon minecraft:area_effect_cloud ~ ~ ~ {Tags:["PK_strc_marker","PK_spawner","higuru_skeleton","PK_HT_mechanic"],Age:-2147483648,Duration:-1,WaitTime:-2147483648}
 

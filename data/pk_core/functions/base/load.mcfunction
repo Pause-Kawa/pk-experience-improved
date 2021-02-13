@@ -13,8 +13,6 @@
 scoreboard objectives add value dummy
 # Constants :
 scoreboard players set %PK_const_100 value 100
-# Current Level :
-scoreboard objectives add currentLevel dummy
 # UUID check :
 scoreboard objectives add UUID0 dummy
 # Positions :

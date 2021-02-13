@@ -10,6 +10,15 @@ scoreboard objectives add memorizedPointZ dummy
 # Used for spring boots
 scoreboard objectives add jumpBoostDelay dummy
 scoreboard objectives add jumpBoostInRow dummy
+# Player death event
+scoreboard objectives add onDeath deathCount
+
+# ----------------------------------------
+# Gamerule
+# ----------------------------------------
+# Custom onDeath event for Faithfulness bewitchment : 
+# - gamerule keepInventory is turned to on by default. Players drop their inventory and experience orbs through a custom actions.
+gamerule keepInventory true
 
 # ----------------------------------------
 # Logs

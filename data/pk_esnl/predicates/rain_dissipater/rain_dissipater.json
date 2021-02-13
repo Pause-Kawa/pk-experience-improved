@@ -1,0 +1,7 @@
+{
+    "condition": "minecraft:entity_properties",
+    "entity": "this",
+    "predicate": {
+        "nbt": "{CustomPotionEffects:[{Id:29b,Amplifier:4b}]}"
+    }
+}

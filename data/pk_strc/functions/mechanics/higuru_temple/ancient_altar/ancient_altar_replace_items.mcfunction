@@ -9,7 +9,8 @@ data modify block ~ ~ ~ Items set from storage temp Items
 execute as @p[tag=PK_use_ancient_altar] run function pk_strc:mechanics/higuru_temple/ancient_altar/ancient_altar_remove_xp_to_triggerer
 
 # Animations
-particle happy_villager ~ ~0.5 ~ 0.5 1.1 0.5 0.001 100
-particle enchant ~ ~0.5 ~ 1 1.1 1 0.001 30
-playsound block.conduit.activate ambient @a ~ ~ ~ 1 1.4
-playsound block.beacon.power_select ambient @a ~ ~ ~ 1 1.2
+particle witch ~ ~0.5 ~ 1 1.1 1 0.1 90
+particle dragon_breath ~ ~0.5 ~ 1 1.1 1 0.1 90
+particle enchant ~ ~0.5 ~ 1 1.1 1 0.001 100
+playsound minecraft:block.end_portal.spawn ambient @a ~ ~ ~ 1 1.7
+playsound minecraft:block.beacon.power_select ambient @a ~ ~ ~ 1 1.7

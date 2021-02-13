@@ -8,6 +8,16 @@
 # Summon an Ancient Altar AEC (one block below)
 execute align xyz positioned ~0.5 ~-1 ~0.5 run summon minecraft:area_effect_cloud ~ ~ ~ {Tags:["PK_strc_marker","PK_ancient_altar","PK_HT_mechanic"],Age:-2147483648,Duration:-1,WaitTime:-2147483648}
 
+# Summon an Ancient Altar dropper (one block below)
+setblock ~ ~-1 ~ dropper[facing=down]{CustomName:'{"text":"Ancient Altar"}'} replace
+
+# Anicent Altar Falling Block
+# - For other falling block, replace "~0.501 ~-1.001 ~0.501" with "~0.499 ~-0.999 ~0.499"
+execute align xyz positioned ~0.501 ~-1.001 ~0.501 run summon falling_block ~ ~ ~ {BlockState:{Name:"minecraft:granite"},NoGravity:1b,Time:-2147483648,DropItem:0b}
+
+# Exemple of Ancient Tablet
+give @p name_tag{display:{Name:'{"text":"Faithful Ancient Tablet","italic":false}',Lore:['{"text":"Faithfulness","color":"yellow","italic":false}']},pkAncientTablet:1b,pkAncientTabletFaithfulness:1b,Enchantments:[{}]} 1
+
 # Summon a Higuru spawner AEC
 execute align xyz positioned ~0.5 ~ ~0.5 run summon minecraft:area_effect_cloud ~ ~ ~ {Tags:["PK_strc_marker","PK_spawner","higuru_skeleton","PK_HT_mechanic"],Age:-2147483648,Duration:-1,WaitTime:-2147483648}
 
@@ -41,3 +51,5 @@ execute align xyz positioned ~0.5 ~ ~0.5 run summon minecraft:area_effect_cloud 
 
 # Summon Swamp Mansory mob placer
 execute align xyz positioned ~0.5 ~ ~0.5 run summon minecraft:area_effect_cloud ~ ~ ~ {Tags:["PK_strc_marker","PK_SM_mob_placer","witch"],Age:-2147483648,Duration:-1,WaitTime:-2147483648}
+
+

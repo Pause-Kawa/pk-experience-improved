@@ -14,10 +14,16 @@ scoreboard objectives add jumpBoostInRow dummy
 scoreboard objectives add impetuousLevel dummy
 scoreboard objectives add impetuousTimer dummy
 scoreboard objectives add sgInstinctDelay dummy
+# Used for magnetic hook
+scoreboard objectives add hookRayHit dummy
+scoreboard objectives add hookRayDistance dummy
+scoreboard objectives add hookUsingDelay dummy
+scoreboard objectives add hookUsingID dummy
 # Player events
 scoreboard objectives add onKill totalKillCount
 scoreboard objectives add onDeath deathCount
 scoreboard objectives add onShootWithBow minecraft.used:bow
+scoreboard objectives add onUseWFOAS minecraft.used:warped_fungus_on_a_stick
 
 # ----------------------------------------
 # Gamerule

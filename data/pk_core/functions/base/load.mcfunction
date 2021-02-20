@@ -5,7 +5,7 @@
 #   value : used for most fake players as value for parameter
 #   pos<X/Y/Z> : used for most positions coordinates comparison through scores
 # Fakes players :
-#   %PK_parameters_<parameter> : parameters of the datapack - <parameter> : string
+#   %PK_param_<parameter> : parameters of the datapack - <parameter> : string
 #   %PK_temp_<x> : used for temporary operations - <x> : integer
 #   %PK_RNG_<x> : used for RNG purposes - <x> : integer (1 to 2)
 

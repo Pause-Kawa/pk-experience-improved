@@ -1,7 +1,0 @@
-{
-	"type": "minecraft:village",
-	"config": {
-		"start_pool": "pk_strc:pillager_fortress/surface",
-		"size": 1
-	}
-}

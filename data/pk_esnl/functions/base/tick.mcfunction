@@ -36,15 +36,33 @@ execute as @a[predicate=pk_esnl:spring_boots/wearing,predicate=!pk_core:location
 
 
 # ----------------------------------------
+# Magnet Hook
+# ----------------------------------------
+
+# Init the hookUsingDelay score to 0 for player having not a score value yet
+scoreboard players add @a hookUsingDelay 0
+# Reduce delay before the hook become usable again after a launch
+scoreboard players remove @a[scores={hookUsingDelay=1..}] hookUsingDelay 1
+# Retracting behavior
+function pk_esnl:mechanics/magnet_hook/retracting/tick
+# Hanging behavior 
+execute as @e[type=area_effect_cloud,tag=PK_magnet_hook_hanging_point,tag=relative_player_reached] at @s run function pk_esnl:mechanics/magnet_hook/hanging/tick
+# Clear eventual obsolete hanging points (can happen if a player disconnect / if a player is killed while using the magnet hook)
+execute as @e[type=area_effect_cloud,tag=PK_magnet_hook_hanging_point] at @s unless entity @a[distance=..16] run kill @s
+# Animation when magnet hook is reusable
+execute as @a[scores={hookUsingDelay=1}] at @s run function pk_esnl:mechanics/magnet_hook/reusable/warn
+
+# ----------------------------------------
 # Bewitchments
 # ----------------------------------------
 
 # Impetuousity
 function pk_esnl:mechanics/bewitchment/impetuousity/tick
 # Safeguard Instinct
-function pk_esnl:mechanics/bewitchment/safeguard_instinct/tick
+execute as @a[predicate=pk_esnl:bewitchment/wear_safeguard_instinct_item] run function pk_esnl:mechanics/bewitchment/safeguard_instinct/tick
 # Wild Cushioning
 function pk_esnl:mechanics/bewitchment/wild_cushioning/tick
+
 
 # ----------------------------------------
 # Events
@@ -56,3 +74,5 @@ execute as @a[scores={onKill=1}] at @s run function pk_esnl:events/player_on_kil
 execute as @a[scores={onDeath=1}] at @s run function pk_esnl:events/player_on_death/trigger
 # On shoot with bow 
 execute as @a[scores={onShootWithBow=1}] at @s run function pk_esnl:events/player_on_shoot_with_bow/trigger
+# On player use warped fungus stick
+execute as @a[scores={onUseWFOAS=1}] at @s run function pk_esnl:events/player_on_use_wfoas/trigger

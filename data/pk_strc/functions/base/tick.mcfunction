@@ -16,7 +16,13 @@ execute as @a[advancements={pk_strc:triggers/press_stone_button=true}] run advan
 # Swamp Mansory
 # ----------------------------------------
 # Generate a Swamp Mansory over a Swamp Hut
-execute as @e[type=witch,tag=!PK_strc_mob,predicate=pk_strc:location/swamp_hut] unless entity @e[type=area_effect_cloud,tag=PK_strc_swamp_mansory,distance=..20] at @s run function pk_strc:generate/swamp_mansory/generate
+execute as @e[type=witch,tag=!PK_strc_mob,predicate=pk_strc:location/swamp_hut] unless entity @e[type=area_effect_cloud,tag=PK_strc_swamp_mansory,distance=..20] at @s run function pk_strc:manual_generation/swamp_mansory/generate
+
+# ----------------------------------------
+# Steam Strays Wellbore
+# ----------------------------------------
+# Generate the surface of the Steam Strays Wellbore
+execute as @e[type=armor_stand,tag=PK_SW_generate] unless score %PK_param_dev_mode value matches 1.. at @s run function pk_strc:manual_generation/steamer_strays_wellbore/spreadplayer_marker
 
 # ----------------------------------------
 # Player Effect

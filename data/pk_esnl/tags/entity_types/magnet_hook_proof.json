@@ -1,0 +1,26 @@
+{
+    "values": [
+        "#minecraft:arrows",
+        "minecraft:area_effect_cloud",
+        "minecraft:dragon_fireball",
+        "minecraft:egg",
+        "minecraft:ender_pearl",
+        "minecraft:evoker_fangs",
+        "minecraft:experience_bottle",
+        "minecraft:experience_orb",
+        "minecraft:eye_of_ender",
+        "minecraft:falling_block",
+        "minecraft:fireball",
+        "minecraft:firework_rocket",
+        "minecraft:fishing_bobber",
+        "minecraft:item_frame",
+        "minecraft:leash_knot",
+        "minecraft:lightning_bolt",
+        "minecraft:llama_spit",
+        "minecraft:potion",
+        "minecraft:small_fireball",
+        "minecraft:tnt",
+        "minecraft:trident",
+        "minecraft:wither_skull"
+    ]
+}

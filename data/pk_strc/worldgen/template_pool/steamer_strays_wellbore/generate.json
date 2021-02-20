@@ -1,11 +1,11 @@
 {
-    "name": "pk_strc:swamp_manory/mobs",
+    "name": "pk_strc:steamer_strays_wellbore/generate",
     "fallback": "minecraft:empty",
     "elements": [
         {
             "weight": 1,
             "element": {
-                "location": "pk_strc:swamp_manory/mobs/vindicator",
+                "location": "pk_strc:steamer_strays_wellbore/elevator_way",
                 "processors": "minecraft:empty",
                 "projection": "rigid",
                 "element_type": "minecraft:legacy_single_pool_element"
@@ -14,7 +14,7 @@
         {
             "weight": 1,
             "element": {
-                "location": "pk_strc:swamp_manory/mobs/evoker",
+                "location": "pk_strc:steamer_strays_wellbore/underground_landing_room_1",
                 "processors": "minecraft:empty",
                 "projection": "rigid",
                 "element_type": "minecraft:legacy_single_pool_element"
@@ -23,7 +23,7 @@
         {
             "weight": 1,
             "element": {
-                "location": "pk_strc:swamp_manory/mobs/witch",
+                "location": "pk_strc:steamer_strays_wellbore/tunnel_1",
                 "processors": "minecraft:empty",
                 "projection": "rigid",
                 "element_type": "minecraft:legacy_single_pool_element"
@@ -32,7 +32,16 @@
         {
             "weight": 1,
             "element": {
-                "location": "pk_strc:swamp_manory/mobs/cat",
+                "location": "pk_strc:steamer_strays_wellbore/tunnel_2",
+                "processors": "minecraft:empty",
+                "projection": "rigid",
+                "element_type": "minecraft:legacy_single_pool_element"
+            }
+        },
+        {
+            "weight": 1,
+            "element": {
+                "location": "pk_strc:steamer_strays_wellbore/tunnel_3",
                 "processors": "minecraft:empty",
                 "projection": "rigid",
                 "element_type": "minecraft:legacy_single_pool_element"

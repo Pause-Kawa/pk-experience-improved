@@ -2,6 +2,6 @@
 	"type": "minecraft:village",
 	"config": {
 		"start_pool": "pk_strc:higuru_temple/surface",
-		"size": 4
+		"size": 7
 	}
 }

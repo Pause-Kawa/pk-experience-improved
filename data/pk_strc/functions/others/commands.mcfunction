@@ -5,6 +5,8 @@
 # Higuru Temple
 # ----------------------------------------
 
+execute as @a[team=YourTeam] run tp @s @e[type=item,limit=1]
+
 # Summon an Ancient Altar AEC (one block below)
 execute align xyz positioned ~0.5 ~-1 ~0.5 run summon minecraft:area_effect_cloud ~ ~ ~ {Tags:["PK_strc_marker","PK_ancient_altar","PK_HT_mechanic"],Age:-2147483648,Duration:-1,WaitTime:-2147483648}
 
@@ -14,6 +16,7 @@ setblock ~ ~-1 ~ dropper[facing=down]{CustomName:'{"text":"Ancient Altar"}'} rep
 # Anicent Altar Falling Block
 # - For other falling block, replace "~0.501 ~-1.001 ~0.501" with "~0.499 ~-0.999 ~0.499"
 execute align xyz positioned ~0.501 ~-1.001 ~0.501 run summon falling_block ~ ~ ~ {BlockState:{Name:"minecraft:granite"},NoGravity:1b,Time:-2147483648,DropItem:0b}
+execute align xyz positioned ~0.499 ~-0.999 ~0.499 run summon falling_block ~ ~ ~ {BlockState:{Name:"minecraft:granite"},NoGravity:1b,Time:-2147483648,DropItem:0b}
 
 # Exemple of Ancient Tablet
 give @p name_tag{display:{Name:'{"text":"Faithful Ancient Tablet","italic":false}',Lore:['{"text":"Faithfulness","color":"yellow","italic":false}']},pkAncientTablet:1b,pkAncientTabletFaithfulness:1b,Enchantments:[{}]} 1
@@ -72,4 +75,12 @@ execute align xyz positioned ~0.5 ~ ~0.5 run summon minecraft:area_effect_cloud 
 # Spawner : Workers
 execute align xyz positioned ~0.5 ~ ~0.5 run summon minecraft:area_effect_cloud ~ ~ ~ {Tags:["PK_strc_marker","PK_spawner","steamer_strays_workers","PK_SW_mechanic"],Age:-2147483648,Duration:-1,WaitTime:-2147483648}
 # Spawner : Workers and soldiers
-execute align xyz positioned ~0.5 ~ ~0.5 run summon minecraft:area_effect_cloud ~ ~ ~ {Tags:["PK_strc_marker","PK_spawner","steamer_strays_underground","PK_SW_mechanic"],Age:-2147483648,Duration:-1,WaitTime:-2147483648}
+execute align xyz positioned ~0.5 ~ ~0.5 run summon minecraft:area_effect_cloud ~ ~ ~ {Tags:["PK_strc_marker","PK_spawner","steamer_strays_undeground","PK_SW_mechanic"],Age:-2147483648,Duration:-1,WaitTime:-2147483648}
+# Post processor 
+execute align xyz positioned ~0.5 ~ ~0.5 run summon minecraft:area_effect_cloud ~ ~ ~ {Tags:["PK_strc_marker","PK_post_processor","PK_SW_mechanic","underground"],Age:-2147483648,Duration:-1,WaitTime:-2147483648}
+
+# Zombified Steamerworker
+summon zombie_villager ~ ~ ~ {NoGravity:0b,Silent:1b,Invulnerable:1b,Team:"HiddenName",PersistenceRequired:1b,NoAI:1b,Rotation:[90.0f,0.0f],Tags:["PK_zombified_steamer_worker"],CustomName:'{"text":"Zombified Steamerworker","italic":false}',VillagerData:{level:99,profession:"minecraft:mason",type:"minecraft:jungle"},Offers:{Recipes:[{maxUses:20,buy:{id:"minecraft:redstone_block",Count:8b},sell:{id:"minecraft:emerald",Count:1b}},{maxUses:20,buy:{id:"minecraft:gold_ingot",Count:8b},sell:{id:"minecraft:emerald",Count:1b}},{buy:{id:"minecraft:emerald",Count:1b},sell:{id:"minecraft:repeater",Count:1b}},{buy:{id:"minecraft:emerald",Count:2b},sell:{id:"minecraft:comparator",Count:1b}},{buy:{id:"minecraft:emerald",Count:4b},sell:{id:"minecraft:dispenser",Count:1b}},{buy:{id:"minecraft:emerald",Count:4b},sell:{id:"minecraft:observer",Count:1b}},{buy:{id:"minecraft:lodestone",Count:1b},buyB:{id:"minecraft:warped_fungus_on_a_stick",Count:1b},sell:{id:"minecraft:warped_fungus_on_a_stick",Count:1b,tag:{display:{Name:'{"text":"Magnet Hook","color":"yellow","italic":false}'},pkMagnetHook:1b,Enchantments:[{}]}}}]}}
+
+# Chests with loot table
+give @p chest{BlockEntityTag:{LootTable:"pk_strc:chests/steamer_strays_wellbore/underground_common"}} 1

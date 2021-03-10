@@ -13,6 +13,13 @@ execute as @e[type=item,nbt={Item:{tag:{deathEvent:1b}}}] at @s run function pk_
 execute as @a[advancements={pk_strc:triggers/press_stone_button=true}] run advancement revoke @s only pk_strc:triggers/press_stone_button
 
 # ----------------------------------------
+# Steamer Strays Wellbore
+# ----------------------------------------
+# Release a Zombified Steamerworker from the ice blocks
+execute as @e[type=zombie_villager,tag=PK_zombified_steamer_worker,tag=!init] at @s unless block ~ ~ ~ ice unless block ~ ~1 ~ ice run function pk_strc:entities/zombified_steamerworker/release
+
+
+# ----------------------------------------
 # Swamp Mansory
 # ----------------------------------------
 # Generate a Swamp Mansory over a Swamp Hut

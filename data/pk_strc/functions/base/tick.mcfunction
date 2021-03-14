@@ -16,8 +16,8 @@ execute as @a[advancements={pk_strc:triggers/press_stone_button=true}] run advan
 # Steamer Strays Wellbore
 # ----------------------------------------
 # Release a Zombified Steamerworker from the ice blocks
-execute as @e[type=zombie_villager,tag=PK_zombified_steamer_worker,tag=!init] at @s unless block ~ ~ ~ ice unless block ~ ~1 ~ ice run function pk_strc:entities/zombified_steamerworker/release
-
+execute as @e[type=zombie_villager,tag=PK_zombified_steamer_worker,tag=!init] run function pk_strc:entities/zombified_steamerworker/init
+execute as @e[type=zombie_villager,tag=PK_zombified_steamer_worker,tag=!free] at @s unless block ~ ~ ~ ice unless block ~ ~1 ~ ice run function pk_strc:entities/zombified_steamerworker/free
 
 # ----------------------------------------
 # Swamp Mansory

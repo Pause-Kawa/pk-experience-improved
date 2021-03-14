@@ -43,14 +43,16 @@ execute as @a[predicate=pk_esnl:spring_boots/wearing,predicate=!pk_core:location
 scoreboard players add @a hookUsingDelay 0
 # Reduce delay before the hook become usable again after a launch
 scoreboard players remove @a[scores={hookUsingDelay=1..}] hookUsingDelay 1
-# Retracting behavior
-function pk_esnl:mechanics/magnet_hook/retracting/tick
+# Pulling player behavior
+function pk_esnl:mechanics/magnet_hook/pull/tick
 # Hanging behavior 
-execute as @e[type=area_effect_cloud,tag=PK_magnet_hook_hanging_point,tag=relative_player_reached] at @s run function pk_esnl:mechanics/magnet_hook/hanging/tick
+execute as @e[type=area_effect_cloud,tag=PK_magnet_hook_latch_point,tag=reached] at @s run function pk_esnl:mechanics/magnet_hook/hung/tick
 # Clear eventual obsolete hanging points (can happen if a player disconnect / if a player is killed while using the magnet hook)
-execute as @e[type=area_effect_cloud,tag=PK_magnet_hook_hanging_point] at @s unless entity @a[distance=..16] run kill @s
+execute as @e[type=area_effect_cloud,tag=PK_magnet_hook_latch_point] at @s unless entity @a[distance=..16] run kill @s
+execute as @a[tag=PK_player_hung] at @s unless entity @e[type=area_effect_cloud,tag=PK_magnet_hook_latch_point,distance=..2] run function pk_esnl:mechanics/magnet_hook/hung/clear
 # Animation when magnet hook is reusable
-execute as @a[scores={hookUsingDelay=1}] at @s run function pk_esnl:mechanics/magnet_hook/reusable/warn
+execute as @a[scores={hookUsingDelay=1}] at @s run playsound block.note_block.hat ambient @s ~ ~ ~ 1 1.4
+
 
 # ----------------------------------------
 # Bewitchments

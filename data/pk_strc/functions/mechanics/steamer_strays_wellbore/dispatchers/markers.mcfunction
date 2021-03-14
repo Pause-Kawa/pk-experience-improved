@@ -3,4 +3,4 @@ execute unless score %PK_param_dev_mode value matches 2.. if entity @s[tag=PK_sp
 execute unless score %PK_param_dev_mode value matches 1.. if entity @s[tag=PK_spawner,tag=init] if entity @p[distance=..50] run function pk_strc:mechanics/steamer_strays_wellbore/spawners/tick
 
 # Manual post-processors 
-execute unless score %PK_param_dev_mode value matches 1.. if entity @s[tag=PK_post_processor] run function pk_strc:manual_generation/steamer_strays_wellbore/post_processor
+execute unless score %PK_param_dev_mode value matches 1.. if entity @s[tag=PK_post_processor] run function pk_strc:manual_generation/steamer_strays_wellbore/post_processor/tick

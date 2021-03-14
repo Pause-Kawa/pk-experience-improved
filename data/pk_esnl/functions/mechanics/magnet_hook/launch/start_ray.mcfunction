@@ -4,11 +4,11 @@
 scoreboard players add #PK_current_hook_ID value 1
 scoreboard players operation @s hookUsingID = #PK_current_hook_ID value
 # Reset player hook states 
-execute if entity @s[tag=PK_player_hanging] run function pk_esnl:mechanics/magnet_hook/hanging/land
+execute if entity @s[tag=PK_player_hung] run function pk_esnl:mechanics/magnet_hook/hung/land
 scoreboard players set @s hookUsingDelay 40
 # Animation
 playsound minecraft:entity.egg.throw ambient @a ~ ~ ~ 1 1.35
 # Start ray
 scoreboard players set @s hookRayHit 0
 scoreboard players set @s hookRayDistance 0
-function pk_esnl:mechanics/magnet_hook/raycasting/ray
+function pk_esnl:mechanics/magnet_hook/launch/ray

@@ -1,0 +1,7 @@
+function pk_core:randomizer/next1
+# - Safeguard Instinct
+execute if score %PK_RNG_1 value matches ..300 run data modify entity @s Offers.Recipes append value {maxUses:6,buy:{id:"minecraft:name_tag",Count:1b},buyB:{id:"minecraft:totem_of_undying",Count:1b},sell:{id:"minecraft:name_tag",Count:1b,tag:{pkAncientTablet:1b,pkAncientTabletSafeguardInstinct:1b,Enchantments:[{}],display:{Name:'{"text":"Safeguarded Ancient Tablet","italic":false}'},Lore:['{"text":"Safeguard Instinct","color":"yellow","italic":false}']}}}
+# - Robustness
+execute if score %PK_RNG_1 value matches 301..650 run data modify entity @s Offers.Recipes append value {maxUses:6,buy:{id:"minecraft:name_tag",Count:1b},buyB:{id:"minecraft:totem_of_undying",Count:1b},sell:{id:"minecraft:name_tag",Count:1b,tag:{pkAncientTablet:1b,pkAncientTabletRobustness:1b,Enchantments:[{}],display:{Name:'{"text":"Robust Ancient Tablet","italic":false}'},Lore:['{"text":"Robustness","color":"yellow","italic":false}']}}}
+# - Wild Cushioning
+execute if score %PK_RNG_1 value matches 651.. run data modify entity @s Offers.Recipes append value {maxUses:6,buy:{id:"minecraft:name_tag",Count:1b},buyB:{id:"minecraft:totem_of_undying",Count:1b},sell:{id:"minecraft:name_tag",Count:1b,tag:{pkAncientTablet:1b,pkAncientTabletWildCushioning:1b,Enchantments:[{}],display:{Name:'{"text":"Wild Ancient Tablet","italic":false}'},Lore:['{"text":"Wild Cushioning","color":"yellow","italic":false}']}}}

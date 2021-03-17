@@ -1,0 +1,7 @@
+function pk_core:randomizer/next1
+# - Faithfullness
+execute if score %PK_RNG_1 value matches ..500 run data modify entity @s Offers.Recipes append value {maxUses:6,buy:{id:"minecraft:name_tag",Count:1b},buyB:{id:"minecraft:totem_of_undying",Count:1b},sell:{id:"minecraft:name_tag",Count:1b,tag:{pkAncientTablet:1b,pkAncientTabletFaithfulness:1b,Enchantments:[{}],display:{Name:'{"text":"Faithful Ancient Tablet","italic":false}'},Lore:['{"text":"Faithfulness","color":"yellow","italic":false}']}}}
+# - Savagery
+execute if score %PK_RNG_1 value matches 501..750 run data modify entity @s Offers.Recipes append value {maxUses:6,buy:{id:"minecraft:name_tag",Count:1b},buyB:{id:"minecraft:totem_of_undying",Count:1b},sell:{id:"minecraft:name_tag",Count:1b,tag:{pkAncientTablet:1b,pkAncientTabletSavagery:1b,Enchantments:[{}],display:{Name:'{"text":"Savage Ancient Tablet","italic":false}'},Lore:['{"text":"Savagery","color":"yellow","italic":false}']}}}
+# - Impetuosity
+execute if score %PK_RNG_1 value matches 751.. run data modify entity @s Offers.Recipes append value {maxUses:6,buy:{id:"minecraft:name_tag",Count:1b},buyB:{id:"minecraft:totem_of_undying",Count:1b},sell:{id:"minecraft:name_tag",Count:1b,tag:{pkAncientTablet:1b,pkAncientTabletImpetuousity:1b,Enchantments:[{}],display:{Name:'{"text":"Impetuous Ancient Tablet","italic":false}'},Lore:['{"text":"Impetuosity","color":"yellow","italic":false}']}}}

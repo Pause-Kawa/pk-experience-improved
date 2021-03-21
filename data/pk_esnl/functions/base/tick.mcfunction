@@ -40,7 +40,7 @@ execute as @e[type=arrow,tag=PK_triggered_rain_dissipater] at @s run function pk
 # ----------------------------------------
 
 # Trigger when a player wears spring boots unless it is in liquid or it has the levitation or slow falling effect
-execute as @a[predicate=pk_esnl:spring_boots/wearing,predicate=!pk_core:location/block/in_liquid] unless entity @s[predicate=pk_esnl:effects/levitation] unless entity @s[predicate=pk_esnl:effects/slow_falling] at @s run function pk_esnl:mechanics/spring_boots/tick
+execute as @a[predicate=pk_esnl:spring_boots/wearing,predicate=!pk_core:location/block/in_liquid] unless entity @s[predicate=pk_esnl:effects/levitation] unless entity @s[predicate=pk_esnl:effects/slow_falling] unless entity @s[predicate=pk_esnl:effects/jump_boost_showicon] at @s run function pk_esnl:mechanics/spring_boots/tick
 
 
 # ----------------------------------------
